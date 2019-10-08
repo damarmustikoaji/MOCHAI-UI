@@ -1,0 +1,235 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-10-08T13:17:15.202Z",
+    "end": "2019-10-08T13:17:48.456Z",
+    "duration": 33254,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3a0f2d41-f8ef-46cb-8e4f-016903ecdff2",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "04c36c81-5cfa-44cf-9229-1a4d7f45efd7",
+          "title": "@demoTest1 | Demo Testing - Mocha, Chai and Selenium Webdriver",
+          "fullFile": "/Users/damar/Ralalicom/Automation/Mocha-UI/test/test.js",
+          "file": "/test/test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook",
+              "fullTitle": "@demoTest1 | Demo Testing - Mocha, Chai and Selenium Webdriver \"before all\" hook",
+              "timedOut": false,
+              "duration": 20,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let chromeCapabilities = Capabilities.chrome();\n//Setting chrome options\nchromeCapabilities.set(\"goog:chromeOptions\",{\n    prefs: {\n        'profile.managed_default_content_settings.popups' : 2,\n        'profile.managed_default_content_settings.notifications' : 2\n    }\n});\ndriver = new Builder()\n.forBrowser('chrome')\n.withCapabilities(chromeCapabilities)\n// .setChromeOptions(new chrome.Options().headless()) //headless mode\n.setChromeOptions(new chrome.Options()) //normal mode\n.build();\ndriver.getWindowHandle();",
+              "err": {},
+              "uuid": "a59908c5-2ae7-4734-916a-cf2a9af31e9a",
+              "parentUUID": "04c36c81-5cfa-44cf-9229-1a4d7f45efd7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook",
+              "fullTitle": "@demoTest1 | Demo Testing - Mocha, Chai and Selenium Webdriver \"after all\" hook",
+              "timedOut": false,
+              "duration": 53,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver.quit()",
+              "err": {},
+              "uuid": "36853420-7157-4b83-b098-4ef20fed0b7c",
+              "parentUUID": "04c36c81-5cfa-44cf-9229-1a4d7f45efd7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "@search1 | As an User, I should be able to successfully searching",
+              "fullTitle": "@demoTest1 | Demo Testing - Mocha, Chai and Selenium Webdriver @search1 | As an User, I should be able to successfully searching",
+              "timedOut": false,
+              "duration": 11090,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://www.google.com');\nawait driver.findElement(By.name('q')).sendKeys('youtube', Key.ENTER);\nawait driver.wait(until.elementLocated(By.id('search')));",
+              "err": {},
+              "uuid": "793d43ae-2993-41fd-99a6-bc9db4201027",
+              "parentUUID": "04c36c81-5cfa-44cf-9229-1a4d7f45efd7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "@search2 | As an User, I should be able to successfully searching",
+              "fullTitle": "@demoTest1 | Demo Testing - Mocha, Chai and Selenium Webdriver @search2 | As an User, I should be able to successfully searching",
+              "timedOut": false,
+              "duration": 2451,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://www.google.com');\nawait driver.findElement(By.name('q')).sendKeys('instagram', Key.ENTER);\nawait driver.wait(until.elementLocated(By.id('search')));",
+              "err": {},
+              "uuid": "1831e2bb-ea92-4a82-9269-279065e21a69",
+              "parentUUID": "04c36c81-5cfa-44cf-9229-1a4d7f45efd7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "793d43ae-2993-41fd-99a6-bc9db4201027",
+            "1831e2bb-ea92-4a82-9269-279065e21a69"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13541,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 180000
+        },
+        {
+          "uuid": "2fa35095-1d0d-4ecc-a444-f73a6f823d45",
+          "title": "@demoTest2 | Demo Testing - Mocha, Chai and Selenium Webdriver",
+          "fullFile": "/Users/damar/Ralalicom/Automation/Mocha-UI/test/test2.js",
+          "file": "/test/test2.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook",
+              "fullTitle": "@demoTest2 | Demo Testing - Mocha, Chai and Selenium Webdriver \"before all\" hook",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let chromeCapabilities = Capabilities.chrome();\n//Setting chrome options\nchromeCapabilities.set(\"goog:chromeOptions\",{\n    prefs: {\n        'profile.managed_default_content_settings.popups' : 2,\n        'profile.managed_default_content_settings.notifications' : 2\n    }\n});\ndriver = new Builder()\n.forBrowser('chrome')\n.withCapabilities(chromeCapabilities)\n// .setChromeOptions(new chrome.Options().headless()) //headless mode\n.setChromeOptions(new chrome.Options()) //normal mode\n.build();\ndriver.getWindowHandle();",
+              "err": {},
+              "uuid": "ffdbe56c-66af-4181-a776-4f411fff58e7",
+              "parentUUID": "2fa35095-1d0d-4ecc-a444-f73a6f823d45",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook",
+              "fullTitle": "@demoTest2 | Demo Testing - Mocha, Chai and Selenium Webdriver \"after all\" hook",
+              "timedOut": false,
+              "duration": 55,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver.quit()",
+              "err": {},
+              "uuid": "0330e7ee-b898-44ad-b67b-ad861abbee16",
+              "parentUUID": "2fa35095-1d0d-4ecc-a444-f73a6f823d45",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "@search3 | As an User, I should be able to successfully searching",
+              "fullTitle": "@demoTest2 | Demo Testing - Mocha, Chai and Selenium Webdriver @search3 | As an User, I should be able to successfully searching",
+              "timedOut": false,
+              "duration": 19554,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://www.google.com');\nawait driver.findElement(By.name('q')).sendKeys('facebook', Key.ENTER);\nawait driver.wait(until.elementLocated(By.id('search')));",
+              "err": {},
+              "uuid": "59b088cd-71c6-4b2f-9f23-8b4457ba4064",
+              "parentUUID": "2fa35095-1d0d-4ecc-a444-f73a6f823d45",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "59b088cd-71c6-4b2f-9f23-8b4457ba4064"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19554,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 180000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 180000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/mochawesome/"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "test-ui": "./node_modules/.bin/mocha ./test --recursive --reporter mochawesome --reporter-options reportDir=reports/mochawesome/ --timeout 180000",
+    "reports": "open ./reports/mochawesome/mochawesome.html"
+  },
+  "dependencies": {
+    "mocha": "^6.2.1",
+    "chai": "^4.2.0",
+    "chromedriver": "^77.0.0",
+    "selenium-webdriver": "^4.0.0-alpha.5",
+    "mochawesome": "^4.1.0"
+  }
+}
